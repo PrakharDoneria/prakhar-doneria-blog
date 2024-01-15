@@ -11,9 +11,13 @@
     <!-- Open Graph meta tags for website preview -->
     <meta property="og:title" content="Prakhar Doneria's Tech Blog">
     <meta property="og:description" content="Explore technology and expertise.">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="assets/preview.jpg">
+    <meta property="og:image" content="assets/preview.jpg">
+    <meta property="og:url" content="https://your-preview-website-url.com">
     <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 
     <!-- Import the Salsa font from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Salsa&display=swap">
@@ -26,25 +30,46 @@
     <header>
         <h1>Welcome to Prakhar Doneria's Tech Blog</h1>
     </header>
-    
+
     <nav>
         <ul>
-            <li><a href="/about.html">About Me</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Who me !? I'm a Self Taught developer 😁 Coding is like Oxygen for me.</p>
-        <br>
-        <p>I can code in HTML, CSS, JS, Python, Java in frontend and for backend.... Why to? Firebase exists ✌🏻 kidding I know MySQL and PHP.</p>
+        <p>I'm Prakhar Doneria from Etawah, Uttar Pradesh, India. I enjoy exploring various technologies and sharing my expertise through this blog.</p>
+        <p>Projects: <a href="https://github.com/prakhardoneria" target="_blank">GitHub.com/prakhardoneria</a></p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Explore my projects on GitHub: <a href="https://github.com/prakhardoneria" target="_blank">GitHub.com/prakhardoneria</a></p>
+    </section>
+	
+	<section id="read-blogs">
+        <h2>Read Blogs</h2>
+        <p>Explore my latest blog posts:</p>
+        <!-- Add your blog links or summaries here -->
+        <ul>
+            <li><a href="blogs/tech/SEO-for-Website.html">Boost ranking in Google Baba</a></li>
+            <li><a href="blogs/android/best-html-editor-android.html">Make free website in Android</a></li>
+            <li><a href="blogs/programming/python-projects.html">Project ideas for Python</a></li>
+        </ul>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
         <p>Name: Prakhar Doneria</p>
         <p>Email: prakhardoneria3@gmail.com</p>
+    </section>
+
+    <section id="age-calculator">
+        <h2> My Current Age</h2>
+        <p id="age-counter">My Age: 17 Years 6 Months 20 Hours 45 Minutes 16 Seconds 89 Milliseconds</p>
     </section>
 
     <script src="script.js"></script>
