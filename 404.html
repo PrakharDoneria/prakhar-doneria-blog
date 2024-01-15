@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Salsa&display=swap">
     <title>404 - Page Not Found</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Salsa', sans-serif;
             background-color: #f8f8f8;
             text-align: center;
             padding: 50px;
@@ -24,6 +25,17 @@
         img {
             max-width: 100%;
             height: auto;
+            margin-bottom: 20px;
+        }
+
+        blockquote {
+            font-style: italic;
+            color: #777;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -32,8 +44,18 @@
     <h1>404 - Page Not Found</h1>
     <p>Are you lost somewhere? Don't worry, even the best get lost sometimes.</p>
     <p>Here's a random funny quote to lighten the mood:</p>
-    <blockquote>
-        "I'm sorry, but I'm not familiar with the page you're looking for. Maybe it's on vacation?"
-    </blockquote>
+    <blockquote id="random-quote"></blockquote>
+    <p><a href="https://codewithprakhar.vercel.app/" target="_blank">Go to Home Page</a></p>
+
+    <script>
+        
+        fetch('https://api.quotable.io/random')
+            .then(response => response.json())
+            .then(data => {
+                const quoteElement = document.getElementById('random-quote');
+                quoteElement.textContent = `"${data.content}" - ${data.author}`;
+            })
+            .catch(error => console.error('Error fetching random quote:', error));
+    </script>
 </body>
 </html>
