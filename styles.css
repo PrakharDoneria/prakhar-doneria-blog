@@ -23,13 +23,15 @@ header {
     color: white;
     text-align: center;
     padding: 1em;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #4CAF50; /* Green - Adjust color as needed */
+    background-color: #4CAF50;
     overflow: hidden;
 }
 
@@ -39,14 +41,16 @@ nav li {
 
 nav a {
     display: block;
-    color: white; /* Text color */
+    color: #fff; /* Updated link color for the navigation */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
+    transform: scale(1.1);
 }
 
 section {
@@ -55,10 +59,22 @@ section {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    transform-origin: center;
+}
+
+section:hover {
+    transform: scale(1.05);
 }
 
 section h2 {
     color: #333;
+}
+
+/* Styling for Read Blogs section */
+#read-blogs a {
+    color: #007bff; /* Updated link color for the Read Blogs section */
 }
 
 footer {
@@ -66,4 +82,31 @@ footer {
     color: white;
     text-align: center;
     padding: 1em;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 0.5em;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
 }
